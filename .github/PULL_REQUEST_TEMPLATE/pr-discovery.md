@@ -1,3 +1,11 @@
+---
+name: Discovery Review Work Item
+title: "documentation: <work item title>"
+about: Create a work item for discovery review work
+labels: discovery
+assignees: '' 
+---
+
 # Discovery Review Work Item
 
 ## Summary
