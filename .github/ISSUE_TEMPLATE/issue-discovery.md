@@ -1,5 +1,6 @@
 ---
 name: Discovery Work Item
+title: "documentation: <work item title>"
 about: Create a work item for discovery work
 labels: discovery
 assignees: ''
