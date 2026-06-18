@@ -1,3 +1,10 @@
+---
+name: Discovery Work Item
+about: Create a work item for discovery work
+labels: discovery
+assignees: ''
+---
+
 # Discovery Work Item
 
 ## Goal
