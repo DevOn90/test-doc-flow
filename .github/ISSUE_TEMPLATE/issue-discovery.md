@@ -18,9 +18,10 @@ assignees: ''
 
 ## Tasks
 <!-- What tasks are needed to complete the deliverable? -->
-- [ ] Create/update document
-- [ ] Review content with stakeholders
-- [ ] Create PR
+- [ ] Assign GH Issue Assignee, Labels, Project, Milestone, Reviewers, etc.
+- [ ] Create dedicated branch for the work item from GH Issue
+- [ ] Create/update document in dedicated branch
+- [ ] Review content with appropriate source
 
 ## Outcome & Decision
 <!-- What was learned or decided after completing this work? -->
@@ -28,8 +29,10 @@ assignees: ''
 
 ## References
 <!-- What documents or resources are relevant to this work item? -->
-- Related documents: <!--E.g., [doccument1](https://github.com/username/repo/blob/main/docs/doccument1.md)-->
-- Related issues: <!--E.g., #123, #456-->
+<!-- Use links to both documents in the main branch and the dedicated branch -->
+- Related documents (dedicated branch - use if PR exists): <!--E.g., [document1](https://github.com/<username>/<repo>/blob/<branch>/docs/document1.md)-->
+- Related documents (main branch - use if PR is merged): <!--E.g., [document1](https://github.com/<username>/<repo>/blob/main/docs/document1.md)-->
+- Branch title: <!--E.g., issue-1234-discovery-work-item-->
 - Related PRs: <!--E.g., #789, #1011-->
 
 ## Definition of Done
@@ -37,3 +40,4 @@ assignees: ''
 - [ ] Knowledge artifact created/updated and validate with appropriate source
 - [ ] Changes committed
 - [ ] PR created
+- [ ] Ensure all hyperlinks in the document are valid and point to the correct resources
