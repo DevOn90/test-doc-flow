@@ -48,10 +48,10 @@
 
 ## Related Artifacts
 
-- JTBD: <!-- [JTBD-XXX](...) -->
-- User Journeys: <!-- [ART-XXX](...) -->
-- Assumptions: <!-- [ASM-XXX](...) -->
-- Experiments: <!-- [EXP-XXX](...) -->
+- JTBD: <!-- [JTBD-XXX](<URL-github/blob/main/path/to/JTBD-XXX.md>) -->
+- User Journeys: <!-- [ART-XXX](<URL-github/blob/main/path/to/ART-XXX.md>) -->
+- Assumptions: <!-- [ASM-XXX](<URL-github/blob/main/path/to/ASM-XXX.md>) -->
+- Experiments: <!-- [EXP-XXX](<URL-github/blob/main/path/to/EXP-XXX.md>) -->
 
 ## Evidence
 <!-- Evidence supporting this persona. -->
