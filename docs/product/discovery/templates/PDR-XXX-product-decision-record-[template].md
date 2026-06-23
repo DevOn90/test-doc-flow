@@ -42,7 +42,6 @@ Links to:
 - Experiments: <!--[EXP-001-experiment](<URL: github/blob/main/>)-->
 - Assumptions: <!--[ASM-001-assumption](<URL: github/blob/main/>)--> 
 - Research: <!--[RES-001-research](<URL: github/blob/main/>)-->
-- Metrics: <!--[MET-001-metric](<URL: github/blob/main/>)-->
 
 ## Consequences
 <!-- Describe the expected outcomes, tradeoffs, and risks associated with the decision. -->
