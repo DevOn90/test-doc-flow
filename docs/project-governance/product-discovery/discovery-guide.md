@@ -211,7 +211,7 @@ flowchart TD
     Q2 -->|Yes| C
 ```
 
-- Default tool: **Hypotheses**
+- Default tool: **Hypothesis**
   - prefer when you don’t understand the solution
   - prefer when you don’t understand the options available
 - Alternative tools:
