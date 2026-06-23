@@ -12,6 +12,7 @@ The simple guide to help me navigate through the product discovery process. It i
     3.4 [Validation Domain Decision Tree](#34-validation-domain-decision-tree)<br>
     3.5 [Risk Domain Decision Tree](#35-risk-domain-decision-tree)<br>
 4. [Discovery Lifecycle](#4-discovery-lifecycle)
+5. [PDR - Product Decision Record](#5-pdr---product-decision-record)
 
 ## 1. Product Discovery Flow
 
@@ -24,6 +25,7 @@ flowchart LR
    D["Artifacts (selected tools)"]
    E["Evidence / Insights"]
    F[Synthesis]
+   F1[Decision Record]
    G[Epic]
    
    BP -- Discovery identifies uncertainty --> A
@@ -32,7 +34,8 @@ flowchart LR
    C -- Selects suitable artifacts --> D
    D -- Produces evidence or insights --> E
    E --> F
-   F -- If confidence is sufficient --> G
+   F -- If confidence is sufficient --> F1
+   F1 -- Decision made --> G
    F -- If uncertainty remains --> BP
 ```
 
@@ -135,7 +138,8 @@ flowchart TD
 
     SYN --Uncertainty Exists--> BP
 
-    SYN --No uncertainty--> EPIC[Epic]
+    SYN --No uncertainty--> PDR[Product Decision Record]
+    PDR --Decision Made--> EPIC[Epic]
 ```
 
 ---
@@ -272,17 +276,37 @@ flowchart TD
 
 ## 4. Discovery Lifecycle
 
+The discovery lifecycle is a simple flow of work that starts with a business problem and ends with a decision that is either accepted or rejected. The flow is iterative and may loop back to the business problem if uncertainty remains after synthesis.
+
 ```mermaid
 flowchart LR
-    A[Identify knowledge gap] --> B[Create Discovery Issue]
-    B --> C[Create branch]
-    C --> D[Create/update discovery artifact]
-    D --> E[Commit changes]
-    E --> F[Open PR]
-    F --> G[Review and merge]
-    G --> H[Update issue outcome and close issue]
+    A[Identify knowledge gap]
+    --> B[Create Discovery Issue]
+    --> C[Create branch]
+    --> D[Create or update Discovery Artifact]
+    --> E[Gather Evidence]
+    --> F{Decision Needed?}
+
+    F -->|No| G[Open PR]
+    F -->|Yes| H[Create or Update PDR]
+
+    H --> G
+    G --> I[Review and Merge]
+    I --> J[Create Epic if PDR Accepted]
 ```
 
-## Open topics
-- missing Decision Record
-- Update the guide with DR (see ChatGpt prompt)
+## 5. PDR - Product Decision Record
+
+### Rules: 
+Create a Product Decision Record only when:
+
+- Discovery results in a meaningful commitment
+- Future work will change because of the decision
+- The decision is expected to remain relevant over time
+
+Do not create a PDR for:
+- Raw findings
+- Interview notes
+- Research notes
+- Experiment execution
+- Temporary observations
