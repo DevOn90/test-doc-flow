@@ -8,6 +8,9 @@ assignees: ''
 
 # Discovery Work Item
 
+## Purpose
+The purpose of this work item is to document the knowledge change needed, the deliverable, and the tasks required to complete the work. This template is intended for discovery work items that require research, analysis, or investigation to inform decision-making.
+
 ## Goal
 <!-- What knowledge change is needed? -->
 <!-- E.g., Create the initial Business Problem document in docs/bp/. -->
