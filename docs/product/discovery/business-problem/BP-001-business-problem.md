@@ -80,10 +80,11 @@ bla-bla
 - [x] Candidate approaches are outlined with decision criteria   
 - [x] Created documentation using guide in `docs/project-governance/product-discovery/discovery-guide.md` or mark `no doc needed` if applicable
 - [ ] No doc needed  
-- [ ] Issue contains reference to updated doc and doc contains link to issue (e.g. #123)
+- [x] Issue contains reference to updated doc and doc contains link to issue (e.g. #123)
 
 ## References
 <!-- Add any relevant links to data, research, related issues, or documentation. -->
-Issue: #17
-PR: <!--e.g., #456 -->
-GH Docs: <!--e.g., [document name](link) -->
+- Issue: #17
+- PR: #18
+- Guide: [Discovery Guide](../../../project-governance/product-discovery/discovery-guide.md)
+- Guide: [Discovery guide - https](https://github.com/devon90/test-doc-flow/blob/main/docs/project-governance/product-discovery/discovery-guide.md)
