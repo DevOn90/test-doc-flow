@@ -2,8 +2,7 @@
 name: Discovery process starter
 title: "documentation: <insert title here>"
 about: Create a work item for discovery work
-labels: discovery,documentation
-assignees: ''
+labels: discovery
 ---
 
 # Discovery Work Item

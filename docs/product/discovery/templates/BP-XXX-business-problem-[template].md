@@ -76,15 +76,17 @@
 <!-- Expected output: e.g., create feature.md, epic.md, RFC, or run discovery. -->
 
 ## Definition of Done
-- [ ] Problem statement is clear and agreed upon
+- [ ] Business problem is clear and agreed upon
 - [ ] Success criteria are measurable and aligned with stakeholders
 - [ ] Root cause hypothesis is documented
 - [ ] Constraints are identified and documented
-- [ ] Candidate approaches are outlined with decision criteria
-- [ ] Next step is defined and assigned     
-- [ ] Created documentation using guide in `docs/01_product/01_governance/artifact-register/issue-doc-strategy-minimal.md` or mark `no doc needed` if applicable
+- [ ] Candidate approaches are outlined with decision criteria  
+- [ ] Created documentation using guide in `<path-to-guide>` or mark `no doc needed` if applicable
 - [ ] No doc needed  
 - [ ] Issue contains reference to updated doc and doc contains link to issue (e.g. #123)
 
 ## References
 <!-- Add any relevant links to data, research, related issues, or documentation. -->
+Issue: <!--e.g., #123 -->
+PR: <!--e.g., #456 -->
+GH Docs: <!--e.g., [document name](link) -->
