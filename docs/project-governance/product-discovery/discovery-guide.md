@@ -89,7 +89,7 @@ Prerequisite: Define all users
 
 Prerequisite: Solution is defined and needs validation, but also low risk or high confidence
 - **Risk/constraint** validation stream
-  - What can breal or limit solution?
+  - What can be real or limit solution?
     - Technical constraints?
     -Time constraints?
     -Cost constraints?
