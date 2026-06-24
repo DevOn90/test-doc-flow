@@ -1,16 +1,13 @@
 ## Metadata
-- **Project**: <name-of-project>
-- **Status**: <Draft-Validated-Superseded>
-- **Stage**: <discovery-delivery-retrospective>
-- **Owner**: <name-of-owner>
-- **Last Updated**: <YYYY-MM-DD>
+- **Project**: Test project
+- **Status**: Draft
+- **Stage**: discovery
+- **Owner**: me
+- **Last Updated**: 2026-06-24
 
 ## Related Documents
 <!--e.g. [document name](link)-->
-- Business Problem Template
-- Feature Template
-- Epic Template
-- Issue Doc Strategy Minimal 
+- [Discovery Guide](../../../project-governance/product-discovery/discovery-guide.md)
 
 
 # Business Problem
@@ -35,17 +32,17 @@
 
 
 ## Affected Stakeholders
-- Primary owner: <name-of-owner>
-- Teams affected: <name-of-teams-affected>
-- User segments affected: <name-of-user-segments-affected>
+- Primary owner: John Doe
+- Teams affected: Finance
+- User segments affected: Heads of Finance, Finance Analysts
 
 ## Root Cause Hypothesis
 <!-- State assumptions about why this is happening. -->
-
+bla-bla
 
 ## Constraints
 <!-- Budget, timeline, technical, legal, compliance, policy constraints. -->
- 
+ some
 
 ## Success Criteria
 <!-- Define measurable outcomes that confirm the problem is resolved. -->
@@ -76,17 +73,18 @@
 <!-- Expected output: e.g., create feature.md, epic.md, RFC, or run discovery. -->
 
 ## Definition of Done
-- [ ] Business problem is clear and agreed upon
-- [ ] Success criteria are measurable and aligned with stakeholders
-- [ ] Root cause hypothesis is documented
-- [ ] Constraints are identified and documented
-- [ ] Candidate approaches are outlined with decision criteria  
-- [ ] Created documentation using guide in `<path-to-guide>` or mark `no doc needed` if applicable
+- [x] Problem statement is clear and agreed upon
+- [x] Success criteria are measurable and aligned with stakeholders
+- [x] Root cause hypothesis is documented
+- [x] Constraints are identified and documented
+- [x] Candidate approaches are outlined with decision criteria   
+- [x] Created documentation using guide in `docs/project-governance/product-discovery/discovery-guide.md` or mark `no doc needed` if applicable
 - [ ] No doc needed  
-- [ ] Issue contains reference to updated doc and doc contains link to issue (e.g. #123)
+- [x] Issue contains reference to updated doc and doc contains link to issue (e.g. #123)
 
 ## References
 <!-- Add any relevant links to data, research, related issues, or documentation. -->
-Issue: <!--e.g., #123 -->
-PR: <!--e.g., #456 -->
-GH Docs: <!--e.g., [document name](link) -->
+- Issue: #17
+- PR: #18
+- Guide: [Discovery Guide](../../../project-governance/product-discovery/discovery-guide.md)
+- Guide: [Discovery guide - https](https://github.com/devon90/test-doc-flow/blob/main/docs/project-governance/product-discovery/discovery-guide.md)
