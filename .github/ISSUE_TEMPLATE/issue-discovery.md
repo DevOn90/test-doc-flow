@@ -1,15 +1,15 @@
 ---
-name: Discovery Work Item
-title: "documentation: <work item title>"
+name: Discovery process starter
+title: "documentation: <insert title here>"
 about: Create a work item for discovery work
-labels: discovery
+labels: discovery,documentation
 assignees: ''
 ---
 
 # Discovery Work Item
 
 ## Purpose
-The purpose of this work item is to document the knowledge change needed, the deliverable, and the tasks required to complete the work. This template is intended for discovery work items that require research, analysis, or investigation to inform decision-making.
+The purpose of this issue is to create a discovery artifact that captures initial knowledge and understanding of a problem, opportunity, or decision. This artifact will serve as a foundation for further exploration, analysis, and decision-making. Usually this document is `Business Problem`, `Business Case`, or `Decision Record`. The goal is to ensure that the team has a clear understanding of the context, objectives, and potential solutions before proceeding with implementation. 
 
 ## Goal
 <!-- What knowledge change is needed? -->
@@ -22,7 +22,7 @@ The purpose of this work item is to document the knowledge change needed, the de
 ## Tasks
 <!-- What tasks are needed to complete the deliverable? -->
 - [ ] Assign Issue metadata (Assignee, Labels, Project, Milestone)
-- [ ] Create dedicated branch for the work item from GH Issue
+- [ ] Create dedicated branch for the artifact from GH Issue
 - [ ] Create/update document in dedicated branch
 - [ ] Validate content with appropriate evidence, stakeholder, or domain expert
 
