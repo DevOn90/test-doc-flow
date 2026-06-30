@@ -170,7 +170,9 @@ flowchart LR
 Take the Assumption and selected tool to make a hypothesis. Then design an experiment to test the hypothesis and gather evidence.
 
 ### Experiment Backlog
-| Assumption ID | Hypothesis | Experiment | Evidence | Decision |
+| Priority | Assumption ID | Hypothesis | Experiment | Evidence | Decision | Owner| Status | Start Date | Completion Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | Assumption 1 | If we implement feature X, then user engagement will increase by 20% | A/B testing of feature X vs. control group | Collected data from A/B test | Decision pending | John Doe | In Progress | 2024-06-01 | 2024-06-15 |
 
 ### Create Hypothesis (tool constrained)
 `Hypothesis = Assumption + Expected Outcome + Rationale`, hypothesis makes the assumption testable and measurable.
