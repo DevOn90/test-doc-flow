@@ -111,14 +111,35 @@ Scoring:
   - 5 - Unknown 
 
 ## 3. Prioritize Uncertainty
-Select the most riskiest uncertainty `Importance High` and `Evidence Low` to focus on first. Create the uncertainty backlog and prioritize the uncertainties based on their importance and evidence level.
 
-| Uncertainty | Type | Description | Uncertainty Level | Evidence Level | Priority |
+```mermaid
+flowchart LR
+    subgraph Assumption Backlog
+       A[Critical Assumption] --> B
+       B["Select best validation approach (tool)"]
+    end
+    subgraph Experiment Backlog
+       B --> C["Frame Hypothesis (based on tool constraints)"] --> D[Design Experiment]
+       D --> E[Gather Evidence] 
+    end
+```
+
+### Assuptions Backlog
+- Select the most riskiest uncertainty `Importance High` and `Evidence Low` to focus on first. Create the assumptions backlog and prioritize the assumptions based on their importance and evidence level.
+
+| Assumption | Type | Description | Priority | Tool ID | Reason for Selection |
 | --- | --- | --- | --- | --- | --- |
-| Uncertainty 1 | Market | Description of uncertainty 1 | 4 | 2 | 1 |
+| Assumption 1 | Market | Description of assumption 1 | 4 | JTBD-001 | Reason for tool 1 |
+
+### Select Best Validation Approach (Tool)
+- Ref [4. Choose Discovery Technique](#4-choose-discovery-technique)
+
+**Principle:** Consider 2-3 tools to validate the assumption. Select the tool that is most appropriate for the assumption and the resources available.
+
+---
 
 ## 4. Choose Discovery Technique
-Select the most appropriate discovery technique to gather evidence for the selected uncertainty. The choice of technique will depend on the type of uncertainty and the resources available. Some common discovery techniques include:
+Select the most appropriate discovery technique to gather evidence for the selected assumption. The choice of technique will depend on the type of assumption and the resources available. Some common discovery techniques include:
 
 Use tool selection steps from the [Discovery Guide](./docs/project-governance/product-discovery/discovery-guide.md#3-tool-selection-heuristic) section 3 `Tool Selection Heuristic` to help you choose the right technique.
 
@@ -133,16 +154,39 @@ And the tool templates:
 - Simple Measurement
 
 ## 5. Gather Evidence
-Take the Assumption and make a hypothesis. Then design an experiment to test the hypothesis and gather evidence.
+
+```mermaid
+flowchart LR
+    subgraph Assumption Backlog
+       A[Critical Assumption] --> B
+       B["Select best validation approach (tool)"]
+    end
+    subgraph Experiment Backlog
+       B --> C["Frame Hypothesis (based on tool constraints)"] --> D[Design Experiment]
+       D --> E[Gather Evidence] 
+    end
+```
+
+Take the Assumption and selected tool to make a hypothesis. Then design an experiment to test the hypothesis and gather evidence.
+
+### Experiment Backlog
+| Assumption ID | Hypothesis | Experiment | Evidence | Decision |
+
+### Create Hypothesis (tool constrained)
+`Hypothesis = Assumption + Expected Outcome + Rationale`, hypothesis makes the assumption testable and measurable.
+
+Hypothesis does not require standalone artifact if the assumption is simple and can be tested with a single experiment. However, if the assumption is complex and requires multiple experiments to test, then it is recommended to create a separate hypothesis artifact.
+
+Add hypothesis ID `HYP-XXX` to the assumption backlog table to link the assumption with the hypothesis.
 
 **Note:** 
 - Think twice before you start an experiment. 
 - Make sure you have a clear hypothesis and a well-defined experiment plan. 
-- Dont over engineer the experiment. Keep it simple and focused on the key uncertainty you are trying to test.
+- Dont over engineer the experiment. Keep it simple and focused on the key assumption you are trying to test.
 
 ```mermaid
 flowchart LR
-    A[Assumptions] --> B[Hyphothesis]
+    A[Assumptions + tool] --> B[Hyphothesis]
     B --> C[Experiment]
     C --> D[Evidence]
 ```
@@ -158,10 +202,10 @@ Document the decision and the rationale behind it in the [Decision Record](./doc
 ## 7. Repeat
 Repeat the process for the next uncertainty in the backlog until the cost of discovering uncertainty is greater than the cost of building the solution.
 
-## 8. Synthesys
+## 8. Synthesis
 Once you have gathered enough evidence and made decisions on the key uncertainties, synthesize the findings and document the insights in a clear and concise manner. This will help inform future decisions and provide a reference for the others.
 
-Ref.: [Synthesys](./docs/product/discovery/templates/SYN-XXX-synthesis-[template].md)
+Ref.: [Synthesis](./docs/product/discovery/templates/SYN-XXX-synthesis-[template].md)
 
 ## 9. References
 
