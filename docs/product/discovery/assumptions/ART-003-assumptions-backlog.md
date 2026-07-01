@@ -7,9 +7,17 @@
 ## Assumptions Backlog
 Use `ART-XXX-assumption-list.md` to create the assumptions backlog and prioritize the assumptions based on their importance and evidence level.
 
-| Assumption | Type | Description | Priority | Tool ID | Reason for Selection |
+```
+| Assumption ID | Type | Description | Priority | Tool ID | Reason for Selection |
 | --- | --- | --- | --- | --- | --- |
-| Assumption 1 | Market | Description of assumption 1 | 4 | JTBD-001 | Reason for tool 1 |
+| AS-XXX | Market | Description of assumption 1 | 4 | JTBD-001 | Reason for tool 1 |
+```
+| Assumption ID | Type | Description | Priority | Tool ID | Reason for Selection |
+| --- | --- | --- | --- | --- | --- |
+| AS-001 | User | We believe users prefer email notifications because they check their email more frequently than they open the application. | 1 | ART-001-survey (TBD hyperlink) | quantify preference distribution |
+| AS-002 | User | We believe users prefer in-app notifications because they ignore marketing emails. | 1 | ART-001-survey (TBD hyperlink) | quantify preference distribution |
+| AS-003 | User | We believe users have no strong preference as long as notifications are timely. | 1 | ART-001-survey (TBD hyperlink) | quantify preference distribution |
+
 
 ## Select Best Validation Approach (Tool)
 Populate table in section `Assumptions Backlog` with the best validation approach (tool) to validate the critical assumptions. Use tool selection steps from the [Discovery Guide](../../../project-governance/product-discovery/discovery-guide.md#3-tool-selection-heuristic) section 3 `Tool Selection Heuristic` to help you choose the right technique.

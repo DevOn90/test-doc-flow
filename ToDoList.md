@@ -1,5 +1,5 @@
 
-
+- [ ] Update templates from actuals e.g. `ART-002-assumption-list.md` to `ART-XXX-assumption-list.md`.
 - [ ] remove pull request templates and folder & add one general template for all PRs
 - [ ] add a new issue template for discovery work items
 - [ ] add copilot instruction to .github/
