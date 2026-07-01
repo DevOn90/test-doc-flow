@@ -10,12 +10,23 @@ The purpose of this document is to capture all currently known product uncertain
 - Feasibility (Technology, Resources)
 - Viability (Business Model, Revenue Streams)
 
-**Uncertainties --> Assumptions:**<br>
-What is the belief that you have about this uncertainty?
+**Uncertainty:**><br>
+`What we dont know?`
 
-| Uncertainty | Type | Description | Importance Level | Evidence Level | Belief (Assumption) |
-| --- | --- | --- | --- | --- | --- |
-| Uncertainty 1 | Market | Description of uncertainty 1 | 2 | 4 | Assumption 1 |
+**Uncertainties --> Assumptions:**<br>
+`What is our current belief (assumption) on this uncertainty?`
+```
+| Uncertainty ID | Type | Description | Importance Level | Evidence Level | Belief (Assumption) | Assumption ID |
+| --- | --- | --- | --- | --- | --- | --- |
+| UNC-XXX| Market | Description of uncertainty 1 | 2 | 4 | Assumption 1 | AS-XXX
+```
+
+| Uncertainty ID | Type | Description | Importance Level | Evidence Level | Belief (Assumption) | Assumption ID |
+| --- | --- | --- | --- | --- | --- | -- |
+| UNC-002 | User | We don't know whether users prefer email notifications or in-app notifications. | 4 | 4 | We believe users prefer email notifications because they check their email more frequently than they open the application. | AS-001
+| UNC-002 | User | We don't know whether users prefer email notifications or in-app notifications. | 4 | 4 | We believe users prefer in-app notifications because they ignore marketing emails. | AS-002 | 
+| UNC-002 | User | We don't know whether users prefer email notifications or in-app notifications. | 4 | 4 | We believe users have no strong preference as long as notifications are timely. | AS-003 |
+
 
 ## Assumption Mapping
 Visualize with a quadrant chart to help prioritize the uncertainties.
