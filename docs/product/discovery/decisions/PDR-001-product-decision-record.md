@@ -145,5 +145,5 @@ Links to:
 ## Related Work
 <!-- Describe any related work that is relevant to the decision. Include links to any relevant artifacts. -->
 - Issues: #25
-- PRs: <!--e.g. #123-->
+- PR: #26
 - Epic: <!--e.g. #456-->
