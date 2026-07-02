@@ -14,7 +14,9 @@
 ## Hypothesis
 - HYP-XXX: - <!-- Insert hypothesis description -->
 
-## Experment
+---
+
+## Experiment
 
 ### Tool: <!-- Insert tool name -->
 
@@ -27,7 +29,19 @@
 (To be completed)
 
 ## Decision
+<!--✅ Supported | ⚠️ Partially Supported | ⛔ Refused -->
+
+### Detail
+<!--Detail description of decision-->
+
+### Decision Date: <YYYY-MM-DD>
+
 (To be completed)
 
 ## Next Steps
 (To be completed)
+
+## References
+- ISSUE: <!--e.g. #125-->
+- PR: <!--e.g. #126-->
+- <!--[EXB-experiments-backlog.md](path-to-experiments-backlog)--> 
