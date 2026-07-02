@@ -38,4 +38,4 @@ flowchart LR
 ## Log
 | Date | Wireframe Version | Change Description | Related Decision |Change Owner |
 |------|----------------|-------------|------------|-------|    
-| YYYY-MM-DD | v0.1 | Initial wireframe creation | PDR-XXX | [Owner Name] |
+| 2026-07-01 | v1.1.0 | [EXS-003-experiment](../../../discovery/experiments/EXP-003-quick-action-location/EXS-003-experiment-simple.md) Quick Action Location Validation | [EXS-003-experiment](../../../discovery/experiments/EXP-003-quick-action-location/EXS-003-experiment-simple.md#decision) - Decision | John Doe |
