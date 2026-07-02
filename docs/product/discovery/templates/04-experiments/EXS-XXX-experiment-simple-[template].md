@@ -28,6 +28,12 @@
 ## Evidence
 (To be completed)
 
+- Total responses: <!-- e.g. 20 -->
+- Completion rate: <!-- e.g. 100% -->
+- Time window: <!-- e.g. 2026-07-01 to 2026-07-15 -->
+
+
+
 ## Design Lightweight Exploration Artifact (Optional)
 <!-- Example: Link to Figma prototype or wireframe, sketch, or other design artifact -->
 
