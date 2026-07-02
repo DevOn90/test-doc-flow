@@ -55,7 +55,7 @@ mindmap
             C1[Business Model]
             C2[Revenue Streams]
 ```
-![problem-solution-image](./problem-solutuion-image.png)
+![problem-solution-image](./problem-solution-image.png)
  
 | Uncertainty | Type | Description | Importance Level | Evidence Level | Belief (Assumption) |
 | --- | --- | --- | --- | --- | --- |
