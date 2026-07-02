@@ -15,11 +15,6 @@ The purpose of this document is to capture all currently known product uncertain
 
 **Uncertainties --> Assumptions:**<br>
 `What is our current belief (assumption) on this uncertainty?`
-```
-| Uncertainty ID | Type | Description | Importance Level | Evidence Level | Belief (Assumption) | Assumption ID |
-| --- | --- | --- | --- | --- | --- | --- |
-| UNC-XXX| Market | Description of uncertainty 1 | 2 | 4 | Assumption 1 | AS-XXX
-```
 
 | Uncertainty ID | Type | Description | Importance Level | Evidence Level | Belief (Assumption) | Assumption ID |
 | --- | --- | --- | --- | --- | --- | -- |

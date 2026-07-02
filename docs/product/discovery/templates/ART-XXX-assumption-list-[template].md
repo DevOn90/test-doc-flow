@@ -10,12 +10,16 @@ The purpose of this document is to capture all currently known product uncertain
 - Feasibility (Technology, Resources)
 - Viability (Business Model, Revenue Streams)
 
+**Uncertainty:**><br>
+`What we dont know?`
+
 **Uncertainties --> Assumptions:**<br>
 What is the belief that you have about this uncertainty?
 
-| Uncertainty | Type | Description | Importance Level | Evidence Level | Belief (Assumption) |
-| --- | --- | --- | --- | --- | --- |
-| Uncertainty 1 | Market | Description of uncertainty 1 | 2 | 4 | Assumption 1 |
+| Uncertainty ID | Type | Description | Importance Level | Evidence Level | Belief (Assumption) | Assumption ID |
+| --- | --- | --- | --- | --- | --- | -- |
+| UNC-XXX | User | What we dont know? | <1-5> | <1-5> | What is the belief that you have about this uncertainty? | AS-XXX |
+
 
 ## Assumption Mapping
 Visualize with a quadrant chart to help prioritize the uncertainties.
