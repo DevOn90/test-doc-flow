@@ -17,6 +17,7 @@ Use `ART-XXX-assumption-list.md` to create the assumptions backlog and prioritiz
 | AS-001 | User | We believe users prefer email notifications because they check their email more frequently than they open the application. | 1 | ART-001-survey (TBD hyperlink) | quantify preference distribution |
 | AS-002 | User | We believe users prefer in-app notifications because they ignore marketing emails. | 1 | ART-001-survey (TBD hyperlink) | quantify preference distribution |
 | AS-003 | User | We believe users have no strong preference as long as notifications are timely. | 1 | ART-001-survey (TBD hyperlink) | quantify preference distribution |
+| AS-004 | User | We believe users prefer a dark mode interface because it is easier on the eyes. | 2 | SUR-002-survey (TBD hyperlink) | validate user preference and usability |
 
 
 ## Select Best Validation Approach (Tool)
