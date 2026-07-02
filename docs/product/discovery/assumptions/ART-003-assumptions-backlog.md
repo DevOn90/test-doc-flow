@@ -7,17 +7,15 @@
 ## Assumptions Backlog
 Use `ART-XXX-assumption-list.md` to create the assumptions backlog and prioritize the assumptions based on their importance and evidence level.
 
-```
-| Assumption ID | Type | Description | Priority | Tool ID | Reason for Selection |
-| --- | --- | --- | --- | --- | --- |
-| AS-XXX | Market | Description of assumption 1 | 4 | JTBD-001 | Reason for tool 1 |
-```
 | Assumption ID | Type | Description | Priority | Tool ID | Reason for Selection |
 | --- | --- | --- | --- | --- | --- |
 | AS-001 | User | We believe users prefer email notifications because they check their email more frequently than they open the application. | 1 | ART-001-survey (TBD hyperlink) | quantify preference distribution |
 | AS-002 | User | We believe users prefer in-app notifications because they ignore marketing emails. | 1 | ART-001-survey (TBD hyperlink) | quantify preference distribution |
 | AS-003 | User | We believe users have no strong preference as long as notifications are timely. | 1 | ART-001-survey (TBD hyperlink) | quantify preference distribution |
 | AS-004 | User | We believe users prefer a dark mode interface because it is easier on the eyes. | 2 | SUR-002-survey (TBD hyperlink) | validate user preference and usability |
+| UNC-005 | User | We believe users will notice Quick Actions on the home screen because they frequently scan the top area when opening the app. | 3 | Lo-FI-wireframe | UI visual prefference test |
+| UNC-005 | USER | We believe users will ignore Quick Actions unless it is placed near their primary task area. | 3 | Lo-FI-wireframe | UI visual prefference test |
+| UNC-005 | User | We believe users prefer accessing key actions from a persistent navigation element rather than a home screen widget. | 3 | Lo-FI-wireframe | UI visual prefference test |
 
 
 ## Select Best Validation Approach (Tool)

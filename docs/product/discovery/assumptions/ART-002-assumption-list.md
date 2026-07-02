@@ -22,6 +22,10 @@ The purpose of this document is to capture all currently known product uncertain
 | UNC-002 | User | We don't know whether users prefer email notifications or in-app notifications. | 4 | 4 | We believe users prefer in-app notifications because they ignore marketing emails. | AS-002 | 
 | UNC-002 | User | We don't know whether users prefer email notifications or in-app notifications. | 4 | 4 | We believe users have no strong preference as long as notifications are timely. | AS-003 |
 | UNC-003 | User | I dont know if users prefer a dark mode or light mode interface. | 3 | 3 | We believe users prefer a dark mode interface because it is easier on the eyes. | AS-004 |
+| UNC-005 | USER | We don’t know whether users will notice and use a “Quick Actions” entry point on the home screen. | 5 | 5 | We believe users will notice Quick Actions on the home screen because they frequently scan the top area when opening the app. | AS-010 |
+| UNC-005 | USER | We don’t know whether users will notice and use a “Quick Actions” entry point on the home screen. | 5 | 5 | We believe users will ignore Quick Actions unless it is placed near their primary task area. | AS-011 |
+| UNC-005 | USER | We don’t know whether users will notice and use a “Quick Actions” entry point on the home screen. | 5 | 5 | We believe users prefer accessing key actions from a persistent navigation element rather than a home screen widget. | AS-012 |
+
 
 
 ## Assumption Mapping
