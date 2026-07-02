@@ -28,6 +28,9 @@
 ## Evidence
 (To be completed)
 
+## Design Lightweight Exploration Artifact (Optional)
+<!-- Example: Link to Figma prototype or wireframe, sketch, or other design artifact -->
+
 ## Decision
 <!--✅ Supported | ⚠️ Partially Supported | ⛔ Refused -->
 

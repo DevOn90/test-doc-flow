@@ -29,6 +29,11 @@ A refined assumption might be:
 
 ---
 
+## Design lightweight Exploration Artifact (Optional)
+<!-- Example: Link to Figma prototype or wireframe, sketch, or other design artifact -->
+
+---
+
 ## Decision
 <!-- Describe the decision that was made. Include any relevant information that supports the decision. -->
 
