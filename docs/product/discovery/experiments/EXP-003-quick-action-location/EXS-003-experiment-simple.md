@@ -1,4 +1,4 @@
-# EXS-002 Experiment Simple: Quick Action Location Validation
+# EXS-003 Experiment Simple: Quick Action Location Validation
 
 ## Status: Planned
 <!-- Options: Planned | Running | Completed | Validated | Invalidated | Abandoned -->
@@ -14,7 +14,9 @@
 - AS-012: - We believe users prefer accessing key actions from a persistent navigation element rather than a home screen widget.
 
 ## Hypothesis
-- If we present users with different layouts of Quick Actions placement, then users will consistently prefer one placement because it aligns with their natural scanning behavior.
+- If we present users with different Quick Action placements in lo-fi wireframes,
+then users will show a clear preference for one layout,
+because UI placement affects perceived discoverability and usability.
 
 ---
 
