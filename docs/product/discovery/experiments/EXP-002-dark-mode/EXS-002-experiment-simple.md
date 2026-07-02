@@ -12,14 +12,26 @@
 - AS-004: - We believe users prefer a dark mode interface because it is easier on the eyes.
 
 ## Hypothesis
-- HYP-XXX: - <!-- Insert hypothesis description -->
+If we provide a dark mode interface, then users will prefer it over a light mode interface because it is easier on the eyes.
+
 
 ## Experment
 
-### Tool: <!-- Insert tool name -->
+### Tool: Survey
 
 ### Description
-<!-- Example: Survey 20 users using three questions about UI theme preference. -->
+
+Survey 20 users using three questions about UI theme preference.
+
+- Question 1: Do you prefer a dark mode or light mode interface?
+   - [ ] Dark mode
+   - [ ] Light mode
+- Question 2: Why do you prefer that mode?
+- Question 3: How often do you use dark mode or light mode interfaces in other applications
+   - [ ] Often
+   - [ ] Sometimes
+   - [ ] Rarely
+   - [ ] Never
 
 ---
 
