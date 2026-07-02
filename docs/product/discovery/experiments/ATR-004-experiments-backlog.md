@@ -14,14 +14,11 @@
 2.4 [Evidence Gathering Rules](#24-evidence-gathering-rules)<br>
 
 ## 1. Backlog
-```
-| Priority | Assumption ID | Hypothesis | Experiment | Evidence | Decision | Owner| Status | Start Date | Completion Date |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Assumption 1 | If we implement feature X, then user engagement will increase by 20% | A/B testing of feature X vs. control group | Collected data from A/B test | Decision pending | John Doe | In Progress | 2024-06-01 | 2024-06-15 |
-```
+
 | Priority | Assumption ID | Hypothesis | Experiment | Evidence | Decision | Owner| Status | Start Date | Completion Date |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | [AS-001,AS-002,AS-003] | [HYP-001-hypothesis](../experiments/HYP-001-hypothesis.md) | [ART-005-survey](../experiments/ART-005-survey.md) | [EVI-001-evidence](../experiments/EVI-001-evidence.md) | [PDR-001-product-decision-record](../decisions/PDR-001-product-decision-record.md) | John Doe | Completed | 2026-07-01 | 2026-07-01 |
+| 2 | AS-004 | If we provide a dark mode interface, then users will prefer it over a light mode interface because it is easier on the eyes. | [EXS-002-experiment-simple.md](../../discovery/experiments/EXP-002-dark-mode/EXS-002-experiment-simple.md#experiment) | [EXS-002-experiment-simple.md](../../discovery/experiments/EXP-002-dark-mode/EXS-002-experiment-simple.md#evidence) | [EXS-002-experiment-simple.md](../../discovery/experiments/EXP-002-dark-mode/EXS-002-experiment-simple.md#decision) | Jane Smith | Completed | 2026-07-01 | 2026-07-15 |
 
 
 ## 2. Execution Guide
