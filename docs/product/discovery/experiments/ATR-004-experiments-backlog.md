@@ -19,6 +19,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | [AS-001,AS-002,AS-003] | [HYP-001-hypothesis](../experiments/HYP-001-hypothesis.md) | [ART-005-survey](../experiments/ART-005-survey.md) | [EVI-001-evidence](../experiments/EVI-001-evidence.md) | [PDR-001-product-decision-record](../decisions/PDR-001-product-decision-record.md) | John Doe | Completed | 2026-07-01 | 2026-07-01 |
 | 2 | AS-004 | If we provide a dark mode interface, then users will prefer it over a light mode interface because it is easier on the eyes. | [EXS-002-experiment-simple.md](../../discovery/experiments/EXP-002-dark-mode/EXS-002-experiment-simple.md#experiment) | [EXS-002-experiment-simple.md](../../discovery/experiments/EXP-002-dark-mode/EXS-002-experiment-simple.md#evidence) | [EXS-002-experiment-simple.md](../../discovery/experiments/EXP-002-dark-mode/EXS-002-experiment-simple.md#decision) | Jane Smith | Completed | 2026-07-01 | 2026-07-15 |
+| 3 | AS-010, AS-011, As-012 | If we present users with different layouts of Quick Actions placement, then users will consistently prefer one placement because it aligns with their natural scanning behavior. |  TBD | TBD | TBD | John Does | Planned | 2026-07-02 | 2026-07-03 | 
 
 
 ## 2. Execution Guide

@@ -49,6 +49,6 @@ Present 20 users with three different lo-fi wireframe layouts of the home screen
 (To be completed)
 
 ## References
-- ISSUE: <!--e.g. #125-->
+- ISSUE: #31
 - PR: <!--e.g. #126-->
-- <!--[EXB-experiments-backlog.md](path-to-experiments-backlog)--> 
+- [EXB-experiments-backlog.md](../../experiments/ATR-004-experiments-backlog.md#1-backlog) 
