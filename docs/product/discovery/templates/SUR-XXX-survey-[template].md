@@ -1,4 +1,4 @@
-# ART-XXX Survey: [Name]
+# SUR-XXX Survey: [Name]
 
 ## Status
 <!-- Options: Draft | Ready | Running | Closed | Archived -->
@@ -131,8 +131,8 @@ For details, see <!--[EVI-XXX-evidence](path-to-evidence)-->
 ## Related Work
 
 - Business Problem: <!-- BP-XXX -->
-- JTBD: <!-- ART-XXX-JTBD -->
-- Assumptions: <!-- ART-XXX-assumption-list -->
+- JTBD: <!-- JTBD-XXX -->
+- Assumptions: <!-- ASM-XXX -->
 - Experiments: <!-- EXP-XXX -->
 - Issues: <!-- e.g. #123 -->
 - PRs: <!-- e.g. #456 -->

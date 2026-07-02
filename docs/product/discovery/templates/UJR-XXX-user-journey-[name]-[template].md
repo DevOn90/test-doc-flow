@@ -1,4 +1,4 @@
-# ART-XXX User Journey: [Name]
+# UJR-XXX User Journey: [Name]
 
 ## Status
 <!-- Options: Draft | Validated | Superseded -->

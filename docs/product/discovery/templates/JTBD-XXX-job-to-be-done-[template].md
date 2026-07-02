@@ -1,4 +1,4 @@
-# ART-XXX: Job To Be Done
+# JTBD-XXX Job To Be Done: [Name of the Job To Be Done]
 
 ## Status
 <!-- Options: Draft | Validated | Superseded -->
