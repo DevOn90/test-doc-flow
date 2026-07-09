@@ -100,14 +100,14 @@
 ---
 
 ## Problem Statement
-
 <!-- Final output of this document -->
+<!--Use dedicated Problem Statement template if the problem needs extensive documentation or multiple problem statements discovered for the same business problem-->
 
 **Template**
 
 > Help **[target user]**
 > achieve **[desired outcome]**
-> because today **[current behavior / pain]**.
+> because currently **[current behavior / pain]**.
 
 Example:
 
