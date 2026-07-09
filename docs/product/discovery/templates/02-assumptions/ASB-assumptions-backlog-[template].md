@@ -1,11 +1,36 @@
+## Metadata
+
+- **Project**: <name-of-project>
+- **Status**: <Draft-In Progress-Completed-Superseded>
+- **Stage**: <discovery>
+- **Owner**: <name-of-owner>
+- **Last Updated**: <YYYY-MM-DD>
+
+---
+
+## Related Documents
+
+- Business Problem
+- Problem Discovery
+- Problem Statement
+- Solution Space Exploration
+- Solution Concept Selection
+
+---
+
 # Assumptions Backlog
 
 ## Purpose
-- Select the most riskiest uncertainty `Importance critical` and `Evidence Unknown` from the list of assumptions to focus on first. Create the assumptions backlog and prioritize the assumptions. 
+- Select assumptions from the list of assumptions to focus on first with the highest combination of:
+  - Importance
+  - Uncertainty
+  - Risk if Wrong 
 - Select the best validation approach (tool) to validate the citical assumptions.
 
 ## Assumptions Backlog
 Use `ART-XXX-assumption-list.md` to create the assumptions backlog and prioritize the assumptions based on their importance and evidence level.
+
+**Priority** = `Impact (Importance)` × `Uncertainty (Evidence)` × `Consequence (Risk if Wrong)`
 
 | Assumption ID | Type | Description | Priority | Tool ID | Reason for Selection |
 | --- | --- | --- | --- | --- | --- |

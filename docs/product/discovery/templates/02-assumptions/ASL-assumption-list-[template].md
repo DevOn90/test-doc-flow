@@ -1,3 +1,23 @@
+## Metadata
+
+- **Project**: <name-of-project>
+- **Status**: <Draft-In Progress-Completed-Superseded>
+- **Stage**: <discovery>
+- **Owner**: <name-of-owner>
+- **Last Updated**: <YYYY-MM-DD>
+
+---
+
+## Related Documents
+
+- Business Problem
+- Problem Discovery
+- Problem Statement
+- Solution Space Exploration
+- Solution Concept Selection
+
+---
+
 # Assumptions List
 
 ## Purpose
@@ -16,10 +36,11 @@ The purpose of this document is to capture all currently known product uncertain
 **Uncertainties --> Assumptions:**<br>
 What is the belief that you have about this uncertainty?
 
-| Uncertainty ID | Type | Description | Importance Level | Evidence Level | Belief (Assumption) | Assumption ID |
-| --- | --- | --- | --- | --- | --- | -- |
-| UNC-XXX | User | What we dont know? | <1-5> | <1-5> | What is the belief that you have about this uncertainty? | AS-XXX |
+**Scoring** = [Link](#scoring)
 
+| ID | Type | Uncertainty | (Belief) Assumption | Importance | Evidence | Risk if Wrong | Risk Level |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| AS-XXX | User | [UNC-XXX] - What we dont know? | What is the belief that you have about this uncertainty? | <1-5> | <1-5> | What is the risk if this assumption is wrong? | <1-5> |
 
 ## Assumption Mapping
 Visualize with a quadrant chart to help prioritize the uncertainties.
@@ -28,7 +49,7 @@ Visualize with a quadrant chart to help prioritize the uncertainties.
 ```mermaid
 quadrantChart
     title Assumption Mapping
-    x-axis "Evidence 1 (Precise data)" --> "Evidence 5 (Unknown)"
+    x-axis "Uncertainty 1 (strong evidence)" --> "Uncertainty 5 (no evidence)"
     y-axis "Importance 1 (Low)"-->  "Importance 5 (Critical)"
     quadrant-1 Critical Assumption
     quadrant-2 Proven & Important
@@ -40,19 +61,25 @@ quadrantChart
     "Logo color matters": [0.25,0.15]   
 ```
 
-Scoring:
+### Scoring:
 - Importance Level:              
   - 1 - Low
   - 2 - Nice to have
   - 3 - Useful
   - 4 - Important
   - 5 - Critical
-- Evidence Level:
-  - 1 - Precise data
-  - 2 - Limited data
-  - 3 - Occasional data
-  - 4 - None 
-  - 5 - Unknown 
+- Uncertainty Level (Evidence):
+  - 1 - Almost certain (strong evidence)
+  - 2 - Low uncertainty (some evidence)
+  - 3 - Some uncertainty (limited evidence)
+  - 4 - High uncertainty (little evidence)
+  - 5 - Unknown (no evidence)
+- Risk Level (Risk if Wrong):
+  - 1 - None
+  - 2 - Low
+  - 3 - Medium
+  - 4 - High
+  - 5 - Critical
 
 ## References
 - [product-discovery-guide-simple.md](#) <!--e.g. [Product Discovery Guide Simple](https://github.com/your-repo/blob/main/path-to-guide) -->
