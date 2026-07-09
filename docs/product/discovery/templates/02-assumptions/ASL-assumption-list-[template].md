@@ -42,6 +42,19 @@ What is the belief that you have about this uncertainty?
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | AS-XXX | User | [UNC-XXX] - What we dont know? | What is the belief that you have about this uncertainty? | <1-5> | <1-5> | What is the risk if this assumption is wrong? | <1-5> |
 
+---
+
+## Detailed Assumption Notes (Optional)
+<!--Use only for assumptions that require additional context or explanation-->
+
+### AS-XXX: [Assumptions Title]
+
+#### Assumption:
+
+#### Further Details / Notes:
+
+---
+
 ## Assumption Mapping
 Visualize with a quadrant chart to help prioritize the uncertainties.
 `belief(Assumption)` + `evidence` + `importance` = `assumption mapping(prioritization)` 
