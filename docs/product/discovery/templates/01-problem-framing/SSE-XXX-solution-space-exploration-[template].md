@@ -38,8 +38,9 @@ Example:
 ---
 
 ## Solution Landscape
-
 <!-- Explore different categories of solutions, not individual features yet -->
+
+Reference: [Opportunity Solution Tree](#opportunity-solution-tree) as visualization of the solution landscape.
 
 ### Solution Direction 1: [Name]
 
@@ -137,3 +138,42 @@ Expected output:
 - Competitor examples:
 - Existing products:
 - Articles/papers:
+
+---
+
+## Opportunity Solution Tree
+<!-- Visualize the solution landscape and candidate concepts -->
+<!--
+Desired Outcome = Business relevant metric that you want to improve.
+Opportunity = Pain point / problem that the user is experiencing.
+Solution = Possible solution direction that could help the user achieve the desired outcome.
+Experiment = Just a reference to the dedicated experiment that will validate the solution concept.
+-->
+
+```mermaid
+flowchart TD
+
+    O["Desired Outcome"]
+
+    O --> OP1["Opportunity 1<br>pain point**"]
+    O --> OP2["Opportunity 2"]
+    O --> OP3["Opportunity 3"]
+
+    OP1 --> S11["Solution A"]
+    OP1 --> S12["Solution B"]
+
+    OP2 --> S21["Solution C"]
+    OP2 --> S22["Solution D"]
+    OP2 --> S23["Solution E"]
+
+    OP3 --> S31["Solution F"]
+
+    S11 --> E111["Experiment"]
+    S12 --> E121["Experiment"]
+
+    S21 --> E211["Experiment"]
+    S22 --> E221["Experiment"]
+    S23 --> E231["Experiment"]
+
+    S31 --> E311["Experiment"]
+```
