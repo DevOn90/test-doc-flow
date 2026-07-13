@@ -1,4 +1,4 @@
-
+- [ ] Remove .ods file form GH. Its not possible to read in GH. Think how to use .ods instead of .md for tables
 - [ ] Update templates from actuals e.g. `ART-002-assumption-list.md` to `ART-XXX-assumption-list.md`.
 - [ ] remove pull request templates and folder & add one general template for all PRs
 - [ ] add a new issue template for discovery work items
@@ -31,3 +31,73 @@ Test Steps:
    - Use an Issue to create new branch
    - complete the `assumption-backlog.md` artifact with the prioritized assumptions.
 
+
+=============================================
+
+
+```mermaid
+flowchart TD
+
+    subgraph PD["Problem Discovery"]
+        direction LR
+
+        A["Initial Business Problem"]
+        B["Problem Discovery<br/>• Target User<br/>• Context<br/>• Current Behavior<br/>• Pain / Impact<br/>• Desired Outcome<br/>• Open Questions"]
+        C["Problem Statement"]
+
+        A -->|"Frame & understand the problem"| B
+        B --> C
+    end
+
+    subgraph SD["Solution Discovery"]
+        direction TD
+
+        D["Solution Space Exploration"]
+        E["Solution Concept Selection"]
+        F["Identify Uncertainties"]
+        G["Formulate Assumptions"]
+        H["Assumption Map"]
+        I["Critical Hypotheses"]
+        J["Experiments / Tests"]
+        K["Evidence"]
+        L["Decision"]
+        M["MVP Definition + MVP Build"]
+        N["Requirements List<br>- As part of PRD"]
+        O["Product Features<br>- As part of PRD"]
+
+        C -->|"Explore possible solutions"| D
+        D -->|"Evaluate & select the most promising concept"| E
+        E --> F
+        F --> G
+        G --> H
+        H --> I
+        I --> J
+        J --> K
+        K --> L
+        L --> M
+        M --> N
+        N -- Req = one or multiple Features --> O
+    end
+    subgraph "PRD - Product Requirements Document"
+        direction TB
+        P["Product Requirements Document"]
+        Q["Product Features"]
+        R["Acceptance Criteria"]
+        S["User Stories"]
+        T["Wireframes / Mockups"]
+        U["Technical Requirements"]
+        V["Non-functional Requirements"]
+        W["Product Baseline"]
+
+        O --> P
+        P --> Q
+        P --> R
+        P --> S
+        P --> T
+        P --> U
+        P --> V
+        P --> W
+    end
+
+       M -- Discover further Uncertainties till its worth it --> F
+```
