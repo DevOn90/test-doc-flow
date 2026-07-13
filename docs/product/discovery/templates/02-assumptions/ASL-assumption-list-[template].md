@@ -38,9 +38,9 @@ What is the belief that you have about this uncertainty?
 
 **Scoring** = [Link](#scoring)
 
-| ID | Type | Uncertainty | (Belief) Assumption | Importance | Evidence | Risk if Wrong | Risk Level |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| AS-XXX | User | [UNC-XXX] - What we dont know? | What is the belief that you have about this uncertainty? | <1-5> | <1-5> | What is the risk if this assumption is wrong? | <1-5> |
+| ID | Type | Uncertainty | (Belief) Assumption | Importance | Evidence | Risk if Wrong | Risk Level | Total Score |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| AS-XXX | User | [UNC-XXX] - What we dont know? | What is the belief that you have about this uncertainty? | <1-5> | <1-5> | What is the risk if this assumption is wrong? | <1-5> | <1-125> |
 
 ---
 
