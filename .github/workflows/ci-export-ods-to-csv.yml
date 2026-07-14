@@ -1,0 +1,77 @@
+name: Export ODS to CSV
+
+on:
+    push:
+        paths:
+            - "**/*.ods"
+    pull_request:
+        paths:
+            - "**/*.ods"
+
+jobs:
+    export:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        steps:
+            - uses: actions/checkout@v4  # pin version
+              with:
+                lfs: true
+                
+            - name: Install LibreOffice
+              run: |
+                sudo apt-get update
+                sudo apt-get install -y libreoffice
+
+            - name: Convert ODS to CSV
+              shell: bash
+              run: |
+                # Enable strict error handling
+                set -euo pipefail
+
+                # Find all ODS files in the repository and convert them to CSV
+                mapfile -t files < <(find . -type f -name "*.ods")
+
+                # Loop through each ODS file and convert it to CSV
+                for f in "${files[@]}"; do
+                    # Determine the output CSV file name based on the ODS file name
+                    out="${f%.ods}.csv"
+
+                    # Convert the ODS file to CSV using LibreOffice in headless mode
+                    soffice --headless --convert-to "csv:Text - txt - csv (StarCalc):44,34,76,1" --outdir "$(dirname "$f")" "$f"
+                    
+                    # Determine the converted CSV file name based on the ODS file name
+                    converted="$(dirname "$f")/$(basename "${f%.ods}").csv"
+                    
+                    # Debugging output to verify the conversion
+                    echo "Converted $f to $converted"
+                    
+                    # Check if the converted file exists before moving it
+                    if [[ -f "$converted" ]]; then
+                      # Move the converted file to the desired output location
+                      mv "$converted" "$out"
+                    fi
+                done
+
+            - name: Commit generated CSV
+              run: |
+                # Enable strict error handling
+                set -euo pipefail
+                # Check if there are any changes to commit
+                if [[ -n "$(git status --porcelain)" ]]; then
+
+                    # Configure Git user for committing changes
+                    git config user.name "github-actions[bot]"
+                    
+                    # Configure Git user email for committing changes
+                    git config user.email "github-actions[bot]@users.noreply.github.com"
+                    
+                    # Add all CSV files to the staging area, ignoring errors if no files are found
+                    git add "*.csv" || true
+
+                    # Commit the changes with a message indicating that the CSV files were auto-generated from ODS files
+                    git commit -m "chore: auto-generate CSV from ODS"
+
+                    # Push the changes to the remote repository
+                    git push
+                fi
