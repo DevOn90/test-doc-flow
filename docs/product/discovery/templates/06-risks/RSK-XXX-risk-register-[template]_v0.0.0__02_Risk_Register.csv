@@ -1,0 +1,3 @@
+Risk Register,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9,Unnamed: 10,Risk Mitigation,Unnamed: 12,Unnamed: 13,Unnamed: 14
+Risk ID,Version,Scope,Description,Type,Impact Description (Optional),Severity,Likelihood,Score,Related Work,Status,Contingency Plan (Optional),Mittigation Strategy,Trade-offs (Optional),Notes
+RSK-XXX,V0.0.0,Product,,UX,<if-risk-occurs-impact is>,2,2,4,https://github.com/<repo-owner>/<repo-name>/issues/1,In-progress,,,,
