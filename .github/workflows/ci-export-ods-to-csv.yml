@@ -89,6 +89,11 @@ jobs:
                     # Commit the changes with a message indicating that the CSV files were auto-generated from ODS files
                     git commit -m "chore: auto-generate CSV from ODS"
 
-                    # Push the changes to the remote repository
-                    git push
+                    # Determine the branch name to push to. 
+                    # If the workflow is triggered by a pull request, 
+                    # use the head reference; otherwise, use the current branch name.
+                    BRANCH="${GITHUB_HEAD_REF:-${GITHUB_REF_NAME}}"
+                    
+                    # Push the committed changes to the determined branch on the origin remote.
+                    git push origin "HEAD:${BRANCH}"
                 fi
