@@ -57,7 +57,10 @@ jobs:
                     # If the workflow is triggered by a pull request, 
                     # use the head reference; otherwise, use the current branch name.
                     BRANCH="${GITHUB_HEAD_REF:-${GITHUB_REF_NAME}}"
-                    
+
+                    # Rebase on top of any remote commits added since checkout (e.g. a prior CI run).
+                    git pull --rebase origin "${BRANCH}"
+
                     # Push the committed changes to the determined branch on the origin remote.
                     git push origin "HEAD:${BRANCH}"
                 fi
