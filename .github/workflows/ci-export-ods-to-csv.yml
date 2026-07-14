@@ -18,10 +18,10 @@ jobs:
               with:
                 lfs: true
                 
-            - name: Install LibreOffice
+            - name: Install Python dependencies
               run: |
-                sudo apt-get update
-                sudo apt-get install -y libreoffice
+                python -m pip install --upgrade pip
+                python -m pip install pandas odfpy
 
             - name: Convert ODS to CSV
               shell: bash
@@ -29,28 +29,46 @@ jobs:
                 # Enable strict error handling
                 set -euo pipefail
 
-                # Find all ODS files in the repository and convert them to CSV
-                mapfile -t files < <(find . -type f -name "*.ods")
+                python - <<'PY'
+                from pathlib import Path
+                import re
 
-                # Loop through each ODS file and convert it to CSV
-                for f in "${files[@]}"; do
-                    # Convert the ODS file to CSV using LibreOffice in headless mode
-                    soffice --headless --convert-to "csv:Text - txt - csv (StarCalc):44,34,76,1" --outdir "$(dirname "$f")" "$f"
-                    
-                    # Determine the converted CSV file name based on the ODS file name
-                    converted="$(dirname "$f")/$(basename "${f%.ods}").csv"
-                    out="${f%.ods}.csv"
-                    
-                    # Debugging output to verify the conversion
-                    echo "Converted $f to $converted"
-                    
-                    # Move only when paths differ; LibreOffice often already writes to final path.
-                    if [[ -f "$converted" ]]; then
-                      if [[ "$converted" != "$out" ]]; then
-                        mv "$converted" "$out"
-                      fi
-                    fi
-                done
+                import pandas as pd
+
+                def sanitize_sheet_name(name: str, index: int) -> str:
+                    safe = re.sub(r"[^A-Za-z0-9._-]+", "-", name.strip()).strip("-")
+                    return safe or f"sheet-{index}"
+
+                ods_files = sorted(Path(".").rglob("*.ods"))
+                for ods in ods_files:
+                    base = ods.with_suffix("")
+                    # Remove old multi-sheet exports to avoid stale files after sheet renames/removals.
+                    for stale in base.parent.glob(f"{base.name}__*.csv"):
+                        stale.unlink()
+
+                    sheets = pd.read_excel(ods, engine="odf", sheet_name=None)
+                    if not sheets:
+                        continue
+
+                    if len(sheets) == 1:
+                        (_, df), = sheets.items()
+                        out = base.with_suffix(".csv")
+                        df.to_csv(out, index=False)
+                        print(f"Converted {ods} -> {out}")
+                        continue
+
+                    first_out = base.with_suffix(".csv")
+                    for idx, (sheet_name, df) in enumerate(sheets.items(), start=1):
+                        safe_sheet = sanitize_sheet_name(sheet_name, idx)
+                        out = base.parent / f"{base.name}__{idx:02d}_{safe_sheet}.csv"
+                        df.to_csv(out, index=False)
+                        print(f"Converted {ods} [{sheet_name}] -> {out}")
+
+                        # Keep a stable compatibility file for tools expecting <name>.csv.
+                        if idx == 1:
+                            df.to_csv(first_out, index=False)
+                            print(f"Updated compatibility CSV {first_out} (first sheet)")
+                PY
 
             - name: Commit generated CSV
               run: |
@@ -65,8 +83,8 @@ jobs:
                     # Configure Git user email for committing changes
                     git config user.email "github-actions[bot]@users.noreply.github.com"
                     
-                    # Add all CSV files to the staging area, ignoring errors if no files are found
-                    git add "*.csv" || true
+                    # Add all CSV files to the staging area recursively.
+                    git add -A -- '*.csv' || true
 
                     # Commit the changes with a message indicating that the CSV files were auto-generated from ODS files
                     git commit -m "chore: auto-generate CSV from ODS"
