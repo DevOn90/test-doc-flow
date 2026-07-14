@@ -11,9 +11,33 @@ If the resulting name is empty, it defaults to "sheet".
 def sanitize_sheet_name(name: str) -> str:
     safe = re.sub(r"[^A-Za-z0-9._-]+", "-", name.strip()).strip("-")
     return safe or "sheet"
+"""
+Exclude certain paths from processing.
+This is useful for ignoring template files or 
+other non-relevant ODS files in the documentation directories
+"""
+EXCLUDED_PATHS = {
+    Path("docs/product/discovery/templates"),
+    Path("docs/product/architecture/templates"),
+}
 
+"""
+Check if a given path is excluded 
+based on the EXCLUDED_PATHS set.
+"""
+def is_excluded(path: Path) -> bool:
+    return any(excluded in path.parents for excluded in EXCLUDED_PATHS)
+
+# Find all ODS files in the current directory and its subdirectories
 ods_files = sorted(Path(".").rglob("*.ods"))
+
+# Iterate over each ODS file found and process it
 for ods in ods_files:
+    
+    # Skip processing if the ODS file is in an excluded path.
+    if is_excluded(ods):
+        continue
+
     base = ods.with_suffix("")
     export_dir = base.parent / "exportsCSV"
     export_dir.mkdir(exist_ok=True)
