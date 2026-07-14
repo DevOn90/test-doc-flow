@@ -34,22 +34,21 @@ jobs:
 
                 # Loop through each ODS file and convert it to CSV
                 for f in "${files[@]}"; do
-                    # Determine the output CSV file name based on the ODS file name
-                    out="${f%.ods}.csv"
-
                     # Convert the ODS file to CSV using LibreOffice in headless mode
                     soffice --headless --convert-to "csv:Text - txt - csv (StarCalc):44,34,76,1" --outdir "$(dirname "$f")" "$f"
                     
                     # Determine the converted CSV file name based on the ODS file name
                     converted="$(dirname "$f")/$(basename "${f%.ods}").csv"
+                    out="${f%.ods}.csv"
                     
                     # Debugging output to verify the conversion
                     echo "Converted $f to $converted"
                     
-                    # Check if the converted file exists before moving it
+                    # Move only when paths differ; LibreOffice often already writes to final path.
                     if [[ -f "$converted" ]]; then
-                      # Move the converted file to the desired output location
-                      mv "$converted" "$out"
+                      if [[ "$converted" != "$out" ]]; then
+                        mv "$converted" "$out"
+                      fi
                     fi
                 done
 
