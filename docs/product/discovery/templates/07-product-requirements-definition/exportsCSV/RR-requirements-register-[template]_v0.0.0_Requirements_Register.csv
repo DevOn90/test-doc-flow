@@ -1,0 +1,4 @@
+Requirements Register,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9,Unnamed: 10,Unnamed: 11,Unnamed: 12,Unnamed: 13,Unnamed: 14,Unnamed: 15,Unnamed: 16
+Version,Req ID,Type,Sub-Type,Description,Priority,Epic ID,Feature ID,Flow ID,Acceptance Criteria,,,,Owner,PR #,Issue #,Notes
+,,,,,,,,,FR (Given / When / Then) or N/A,NFR (measurable pass/fail) or N/A,TR (technical validation criteria) or N/A,Status,,,,
+V0.0.0,XXX,FR,CRUD / Data Entry,,Must,EP-XXX,FT-XXX,FL-XXX,Given: <not logged in> / When: <submit credentials> / Then: <redicrect to dashboard>,<Page loads in under 2 seconds for 95% of requests>,API must use versioned REST endpoints,Invalidated,,https://github.com/<repo-owner>/<repo-name>/pull/1,https://github.com/<repo-owner>/<repo-name>/issues/1,
