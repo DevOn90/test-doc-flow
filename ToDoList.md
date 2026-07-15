@@ -34,6 +34,7 @@
     - [ ] Do i have to uninstall `python` or CI workflow does it authomatically? 
 
 - pre-commit test
+- pre-commit test with hooksPath set
 
 ===========================================
 
