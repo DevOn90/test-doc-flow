@@ -3,22 +3,6 @@
 set -euo pipefail
 
 # ----------------------------------------------------
-# Verify that core.hooksPath is set to .githooks.
-# If not, the hook may have been triggered by accident or 
-# the repo is not set up correctly.
-# ----------------------------------------------------
-HOOKS_PATH="$(git config core.hooksPath 2>/dev/null || true)"
-if [[ "${HOOKS_PATH}" != ".githooks" ]]; then
-  echo ""
-  echo "WARNING: core.hooksPath is not set to '.githooks'."
-  echo "This hook may not run automatically on future commits."
-  echo "Run the following command in the repository root to fix this:"
-  echo ""
-  echo "    git config core.hooksPath .githooks"
-  echo ""
-fi
-
-# ----------------------------------------------------
 # Run pre-commit for ODS to CSV conversion  and 
 # commit/push the generated CSVs to the repo.
 # ----------------------------------------------------
