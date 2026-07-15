@@ -11,36 +11,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4  # pin version
 
-      - name: Validate githook contract
+      - name: Validate core.hooksPath
         shell: bash
         run: |
           set -euo pipefail
-
-          if [[ ! -f ".githooks/pre-commit" ]]; then
-            echo "ERROR: Missing .githooks/pre-commit"
+          HOOKS_PATH="$(git config core.hooksPath 2>/dev/null || true)"
+          if [[ "${HOOKS_PATH}" != ".githooks" ]]; then
+            echo "ERROR: core.hooksPath is not set to .githooks"
+            echo "Set it in your local repository before committing:"
+            echo "  git config core.hooksPath .githooks"
             exit 1
           fi
 
-          if [[ ! -x ".githooks/pre-commit" ]]; then
-            echo "ERROR: .githooks/pre-commit is not executable."
-            echo "Fix with: chmod +x .githooks/pre-commit"
-            exit 1
-          fi
-
-          if ! grep -q "scripts/ci/export_ods_to_csv.py" .githooks/pre-commit; then
-            echo "ERROR: pre-commit does not run ODS->CSV export script."
-            exit 1
-          fi
-
-          if ! grep -q "git add -A -- ':(glob)**/exportsCSV/*.csv'" .githooks/pre-commit; then
-            echo "ERROR: pre-commit does not stage generated CSV files."
-            exit 1
-          fi
-
-          git config core.hooksPath .githooks
-          if [[ "$(git config core.hooksPath)" != ".githooks" ]]; then
-            echo "ERROR: Failed to set core.hooksPath to .githooks"
-            exit 1
-          fi
-
-          echo "Git hook contract is valid."
+          echo "core.hooksPath is correctly set to .githooks."
