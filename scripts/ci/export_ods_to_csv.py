@@ -1,3 +1,10 @@
+# /// script
+# requires-python = ">=3.10"
+# dependencies = [
+#    "pandas",
+#     "odfpy",
+# ]
+# ///
 from pathlib import Path
 import re
 import pandas as pd  # type: ignore
