@@ -33,6 +33,8 @@
     - [ ] What about cleaning up the `exportsCSV/` folder? Do we want to keep old CSVs or remove them? I think we should remove them, but maybe we want to keep them for history.
     - [ ] Do i have to uninstall `python` or CI workflow does it authomatically? 
 
+- pre-commit test
+
 ===========================================
 
 

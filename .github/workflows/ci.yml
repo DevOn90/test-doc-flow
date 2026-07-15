@@ -1,0 +1,37 @@
+name: ci-orchestration
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      ods_pipeline: ${{ steps.filter.outputs.ods_pipeline }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Detect relevant changes
+        id: filter
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            ods_pipeline:
+              - "**/*.ods"
+              - ".githooks/pre-commit"
+              - "scripts/ci/export_ods_to_csv.py"
+              - ".github/workflows/ci-export-ods-to-csv.yml"
+              - ".github/workflows/ci-check-githook-path.yml"
+              - ".github/workflows/ci.yml"
+
+  check-githook-path:
+    needs: changes
+    if: github.event_name == 'workflow_dispatch' || needs.changes.outputs.ods_pipeline == 'true'
+    uses: ./.github/workflows/ci-check-githook-path.yml
+
+  export-ods-to-csv:
+    needs: [changes, check-githook-path]
+    if: github.event_name == 'workflow_dispatch' || needs.changes.outputs.ods_pipeline == 'true'
+    uses: ./.github/workflows/ci-export-ods-to-csv.yml

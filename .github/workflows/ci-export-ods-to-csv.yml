@@ -1,12 +1,7 @@
 name: Export ODS to CSV
 
 on:
-    push:
-        paths:
-            - "**/*.ods"
-    pull_request:
-        paths:
-            - "**/*.ods"
+  workflow_call:
 
 jobs:
     export:
