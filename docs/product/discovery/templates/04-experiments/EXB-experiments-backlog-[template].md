@@ -1,3 +1,23 @@
+## Metadata
+
+- **Project**: <name-of-project>
+- **Status**: <Draft-In Progress-Completed-Superseded>
+- **Stage**: <discovery>
+- **Owner**: <name-of-owner>
+- **Last Updated**: <YYYY-MM-DD>
+
+---
+
+## Related Documents
+
+- Business Problem
+- Problem Discovery
+- Problem Statement
+- Solution Space Exploration
+- Solution Concept Selection
+
+---
+
 # Experiments Backlog
 
 ## Purpose

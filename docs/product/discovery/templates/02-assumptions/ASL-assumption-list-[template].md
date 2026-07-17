@@ -34,7 +34,7 @@ The purpose of this document is to capture all currently known product uncertain
 `What we dont know?`
 
 **Uncertainties --> Assumptions:**<br>
-What is the belief that you have about this uncertainty?
+`What is our current belief (assumption) on this uncertainty?`
 
 **Scoring** = [Link](#scoring)
 
