@@ -1,4 +1,4 @@
-- [ ] Remove .ods file form GH. Its not possible to read in GH. Think how to use .ods instead of .md for tables
+
 - [ ] Update templates from actuals e.g. `ART-002-assumption-list.md` to `ART-XXX-assumption-list.md`.
 - [ ] remove pull request templates and folder & add one general template for all PRs
 - [ ] add a new issue template for discovery work items
@@ -20,23 +20,6 @@
 
 
 ==========================================
-
-## Conversion ODS to CSV
-- [ ] Keep ODS as authoring source
-- [ ] Convert ODS to CSV for GH display
-- [ ] Export one CSV per sheet
-- [ ] Export to dedicated folder, sibling to ODS file e.g. `exportsCSV/`
-- [ ] apply naming convention for CSV files: `<ODS file name>_<sheet name>.csv` 
-- [ ] No duplicate first-sheet CSV
-- [ ] Clean up rules:
-    - [ ] Remove `.csv` files prior script run (I assume `mv x to y` will do it)
-    - [ ] What about cleaning up the `exportsCSV/` folder? Do we want to keep old CSVs or remove them? I think we should remove them, but maybe we want to keep them for history.
-    - [ ] Do i have to uninstall `python` or CI workflow does it authomatically? 
-
-- pre-commit test
-- pre-commit test with hooksPath set
-
-===========================================
 
 
 ```mermaid
