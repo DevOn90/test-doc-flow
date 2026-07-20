@@ -1,249 +1,252 @@
-# Simplified Product Discovery Guide
+# Product Discovery Guide - Simple
 
-## Intro
-This is a simplified guide to product discovery. It is designed to help me quickly understand the key steps in the product discovery process and how to apply them in practice. 
+## ToC
+1. [Purpose](#1-purpose)
+2. [Flow Diagrams](#2-flow-diagrams)<br>
+   2.1. [SW Delivery Flow](#21-sw-delivery-flow)<br>
+   2.2. [Discovery Flow](#22-discovery-flow)<br>
+3. [Problem Discovery](#3-problem-discovery)<br>
+   3.1. [Business Problem](#31-business-problem)<br>
+   3.2. [Problem Discovery](#32-problem-discovery)<br>
+   3.3. [Problem Statement](#33-problem-statement)<br>
+4. [Solution Discovery](#4-solution-discovery)<br>
+   4.1. [Solution Space Exploration](#41-solution-space-exploration)<br>
+   4.2. [Solution Concept Selection](#42-solution-concept-selection)<br>
+   4.3. [Uncertainties & Assumptions](#43-uncertainties--assumptions)<br>
+   4.4. [Experiments](#44-experiments)<br>
+   4.5. [Decisions Record](#45-decisions-record)<br>
+5. [Product Requirements Document (PRD)](#5-product-requirements-document-prd)<br>
+    5.1. [Requirements Register](#51-requirements-register)<br>
+    5.2. [Product Backlog](#52-product-backlog)<br>
+    5.3. [Product Requirements Document (PRD)](#53-product-requirements-document-prd)<br>
+6. [Risk Management](#6-risk-management)
 
-## Product Discovery Flow
-```mermaid
-flowchart LR
-    A[Business Problem] --> B[Indentify Uncertainty]
-    B --> C[Prioritize Uncertainty]
-    C --> D[Choose Discovery Technique]
-    D --> E[Gather Evidence]
-    E --> F[Make Decision]
-    F --Repeat--> B
-    F --> G[Synthesys]
-```
+## 1. Purpose
+This is a simplified guide to product discovery. It is designed to help me quickly understand the key steps in the product discovery process and how to apply them in practice.
 
-## ToC:
-1. [Business Problem](#1-business-problem)
-2. [Identify Uncertainty](#2-identify-uncertainty)
-3. [Prioritize Uncertainty](#3-prioritize-uncertainty)
-4. [Choose Discovery Technique](#4-choose-discovery-technique)
-5. [Gather Evidence](#5-gather-evidence)
-6. [Make Decision](#6-make-decision)
-7. [Repeat](#7-repeat)
-8. [Synthesys](#8-synthesys)
-9. [References](#9-references)
+### Usage:
+This document is intended to describe the process `flow` as well as usage of `artifacts and templates` for each step of the process.
 
-## 1. Business Problem
-Describe the business problem you are trying to solve. It should not contains any solutions or implementation details or causes. It should be a clear and concise statement of the problem that you are trying to solve. 
+#### Artifacts and Templates location:
+- **Architecture related:** `docs/product/architecture/templates`
+- **Product Discovery related:** `docs/product/discovery/templates`
 
-Ref.: [TBD](./path-to-business-problem-guide.md)
-
-## 2. Identify Uncertainty
-Take BP and identify the uncertainties that are preventing you from making a decision. 
-
-These uncertainties can be related:
-- market
-- users
-- technology
-- business model
-- other 
-
-
-```mermaid
-mindmap
-    root((Innovation))
-        A[Desirability]
-            A1[Market]
-            A2[Users]
-        B[Feasibility]
-            B1[Technology]
-            B2[Resources]
-        C[Viability]
-            C1[Business Model]
-            C2[Revenue Streams]
-```
-![problem-solution-image](./problem-solution-image.png)
- 
-| Uncertainty | Type | Description | Importance Level | Evidence Level | Belief (Assumption) |
-| --- | --- | --- | --- | --- | --- |
-| Uncertainty 1 | Market | Description of uncertainty 1 | 2 | 4 | Assumption 1 |
+The Artifact and Template are copy/paste to relevant project folder and modified to fit the project context. The original template is `not modified`.
 
 
 ---
 
-**Express `uncertainties` into `beliefs(Assumptions)`**
+## 2. Flow Diagrams
 
-Add a new column the the table to capture the `beliefs(Assumptions)`.
+### 2.1 SW Delivery Flow
+See the High-level flowchart of the SW Delivery process below. Notice that `Architecture` is cross-cutting activity.
 
-**Core Question:** What is the belief that you have about this uncertainty?
+![SW_Delivery_High-Level_Flowchart.drawio.png](assets/SW_Delivery_High-level_Flowchart.drawio.png)
 
-**Examples:**
-- Uncertainty: Users will prefer mobile over web
-- Belief: Users will prefer mobile over web because they are always on the go and want to access the product from their mobile devices.
-- Uncertainty: Market needs feature X
-- Belief: Market needs feature X because it will help them achieve their goals faster and more efficiently.
-
----
-
-Visualize with a quadrant chart to help prioritize the uncertainties.
-`belief(Assumption)` + `evidence` + `importance` = `assumption mapping(prioritization)`
+### 2.2 Discovery Flow
 
 ```mermaid
-quadrantChart
-    title Assumption Mapping
-    x-axis "Evidence 1 (Precise data)" --> "Evidence 5 (Unknown)"
-    y-axis "Importance 1 (Low)"-->  "Importance 5 (Critical)"
-    quadrant-1 Critical Assumption
-    quadrant-2 Proven & Important
-    quadrant-3 Monitor
-    quadrant-4 Ignore
-    "Market needs feature": [0.15,0.95]
-    "Users prefer mobile": [0.75,0.85]
-    "Email reminders help": [0.65,0.45]
-    "Logo color matters": [0.25,0.15]   
-```
+flowchart TD
 
-Scoring:
-- Importance Level:              
-  - 1 - Low
-  - 2 - Nice to have
-  - 3 - Useful
-  - 4 - Important
-  - 5 - Critical
-- Evidence Level:
-  - 1 - Precise data
-  - 2 - Limited data
-  - 3 - Occasional data
-  - 4 - None 
-  - 5 - Unknown 
+    subgraph PD["Problem Discovery"]
+        direction LR
 
-## 3. Prioritize Uncertainty
+        A["Initial Business Problem"]
+        B["Problem Discovery<br/>• Target User<br/>• Context<br/>• Current Behavior<br/>• Pain / Impact<br/>• Desired Outcome<br/>• Open Questions"]
+        C["Problem Statement"]
 
-```mermaid
-flowchart LR
-    subgraph Assumption Backlog
-       A[Critical Assumption] --> B
-       B["Select best validation approach (tool)"]
+        A -->|"Frame & understand the problem"| B
+        B --> C
     end
-    subgraph Experiment Backlog
-       B --> C["Frame Hypothesis (based on tool constraints)"] --> D[Design Experiment]
-       D --> E[Gather Evidence] 
+
+    subgraph SD["Solution Discovery"]
+        direction TD
+
+        D["Solution Space Exploration"]
+        E["Solution Concept Selection"]
+        F["Identify Uncertainties"]
+        G["Formulate Assumptions"]
+        H["Assumption Map"]
+        I["Critical Hypotheses"]
+        J["Experiments / Tests"]
+        K["Evidence"]
+        L["Decision"]
+        M["MVP Definition + MVP Build"]
+        N["Requirements List<br>- As part of PRD"]
+        O["Product Features<br>- As part of PRD"]
+
+        C -->|"Explore possible solutions"| D
+        D -->|"Evaluate & select the most promising concept"| E
+        E --> F
+        F --> G
+        G --> H
+        H --> I
+        I --> J
+        J --> K
+        K --> L
+        L --> M
+        M --> N
+        N -- Req = one or multiple Features --> O
     end
+    subgraph "PRD - Product Requirements Document"
+        direction TB
+        P["Product Requirements Document"]
+        Q["Product Features"]
+        R["Acceptance Criteria"]
+        S["User Stories"]
+        T["Wireframes / Mockups"]
+        U["Technical Requirements"]
+        V["Non-functional Requirements"]
+        W["Product Baseline"]
+
+        O --> P
+        P --> Q
+        P --> R
+        P --> S
+        P --> T
+        P --> U
+        P --> V
+        P --> W
+    end
+
+       M -- Discover further Uncertainties till its worth it --> F
 ```
 
-### Assuptions Backlog
-- Select the most riskiest uncertainty `Importance High` and `Evidence Low` to focus on first. Create the assumptions backlog and prioritize the assumptions based on their importance and evidence level.
+## 3. Problem Discovery
 
-| Assumption | Type | Description | Priority | Tool ID | Reason for Selection |
-| --- | --- | --- | --- | --- | --- |
-| Assumption 1 | Market | Description of assumption 1 | 4 | JTBD-001 | Reason for tool 1 |
+### 3.1 Business Problem
 
-### Select Best Validation Approach (Tool)
-- Ref [4. Choose Discovery Technique](#4-choose-discovery-technique)
+Used to discover the problem from the business perspective.
 
-**Principle:** Consider 2-3 tools to validate the assumption. Select the tool that is most appropriate for the assumption and the resources available.
+**Template:** `docs/product/discovery/templates/01-problem-framing/BP-XXX-business-problem-[template].md`
 
 ---
 
-## 4. Choose Discovery Technique
-Select the most appropriate discovery technique to gather evidence for the selected assumption. The choice of technique will depend on the type of assumption and the resources available. Some common discovery techniques include:
+### 3.2 Problem Discovery
 
-Use tool selection steps from the [Discovery Guide](./docs/project-governance/product-discovery/discovery-guide.md#3-tool-selection-heuristic) section 3 `Tool Selection Heuristic` to help you choose the right technique.
+Used to discovery the problem from the technical/user perspective.
 
-And the tool templates:
+**Template:** `docs/product/discovery/templates/01-problem-framing/PDS-XXX-problem-discovery-[template].md`
+
+---
+
+### 3.3 Problem Statement
+
+Used to summarize the problem discovery results into a concise statement. Use it only when the problem is complex and requires dedicated artifact to summarize the problem discovery results. Otherwise, the problem statement should be included in the problem discovery artifact.
+
+**Template:** `docs/product/discovery/templates/01-problem-framing/PST-XXX-problem-statement-[template].md`
+
+---
+
+## 4. Solution Discovery
+
+### 4.1 Solution Space Exploration
+
+Used to explore the solution space and identify potential solutions to the problem.
+
+**Template:** `docs/product/discovery/templates/01-problem-framing/SSE-XXX-solution-space-exploration-[template].md`
+
+---
+
+### 4.2 Solution Concept Selection
+
+Used to select the most promising solution concept candidate from the solution space exploration based on assessment criteria.
+
+**Template:** `docs/product/discovery/templates/01-problem-framing/SCS-XXX-solution-concept-selection-[template].md`
+
+---
+
+### 4.3 Uncertainties & Assumptions
+
+Used to identify the uncertainties and related assumptions. Evaluate and map the assumptions to prioritize the riskiest assumptions to focus on first. Manage and track the assumptions via backlog.
+
+**Template:** `docs/product/discovery/templates/02-assumptions/ASL-assumption-list-[template].md`<br>
+**Template:** `docs/product/discovery/templates/02-assumptions/ASB-assumptions-backlog-[template].md`
+
+**Note:** After several projects, consider moving the `backlog.md to backlog.ods`.
+
+---
+
+### 4.4 Experiments
+
+Used to design and execute experiments to test the assumptions and gather evidence to support or refute the assumptions. The experiments are managed and tracked via backlog.
+
+```mermaid
+flowchart TB
+    A[Assumption] --Complex --> B
+    B[Experiment Artifact]
+    A --Simple--> C[Experiment-Simple Artifact]
+    B --Complex Evidence --> D[Evidence Artifact]
+    B --Simple Evidence --> E[Evidence-Inline of Experiment Artifact]
+    C --Simple Evidence --> E
+    D --> F[Experiment Backlog Artifact]
+    E --> F
+```
+
+**Template:** `docs/product/discovery/templates/04-experiments/EXP-XXX-experiment-[template].md`<br>
+**Template:** `docs/product/discovery/templates/04-experiments/EXS-XXX-experiment-simple-[template].md`<br>
+**Template:** `docs/product/discovery/templates/04-experiments/EVI-XXX-evidence-[template].md`<br>
+**Template:** `docs/product/discovery/templates/04-experiments/EXB-experiments-backlog-[template].md`
+
+**Note:** After several projects, consider moving the `backlog.md to backlog.ods`.
+
+#### Discovery Techniques (Tools) for Experiments
+
+Is defined as part of the experiment artifact and depends on the type of assumption and the resources available. The guide for selecting use [discovery-technique-guide.md](./discovery-technique-guide.md#toc) to help you choose the right technique.
+
+**Common Discovery Techniques Artifact Templates:**<br>
+Location: `docs/product/discovery/templates/03-discovery-techniques/*`
 - JTBD (Jobs to be Done)
 - User Journey Mapping
-- Constraints Notes   
-- Option Sets
+- Constraints Notes
+- Option Sets & Solution Sketches
 - Personas
-- Problem Statements
-- Risk logs
+- Prototypes
 - Simple Measurement
+- Survey
+- Etc.
 
-## 5. Gather Evidence
+---
 
-```mermaid
-flowchart LR
-    subgraph Assumption Backlog
-       A[Critical Assumption] --> B
-       B["Select best validation approach (tool)"]
-    end
-    subgraph Experiment Backlog
-       B --> C["Frame Hypothesis (based on tool constraints)"] --> D[Design Experiment]
-       D --> E[Gather Evidence] 
-    end
-```
+### 4.5 Decisions Record
 
-Take the Assumption and selected tool to make a hypothesis. Then design an experiment to test the hypothesis and gather evidence.
+Used to document the decisions made based on the evidence gathered from the experiments. Dedicated decision artifact is used when the decision is complex else the decision is part of the experiment artifact.
 
-### Experiment Backlog
-| Priority | Assumption ID | Hypothesis | Experiment | Evidence | Decision | Owner| Status | Start Date | Completion Date |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Assumption 1 | If we implement feature X, then user engagement will increase by 20% | A/B testing of feature X vs. control group | Collected data from A/B test | Decision pending | John Doe | In Progress | 2024-06-01 | 2024-06-15 |
+**Template:** `docs/product/discovery/templates/05-decisions/PDR-XXX-product-decision-record-[template].md`
 
-### Create Hypothesis (tool constrained)
-`Hypothesis = Assumption + Expected Outcome + Rationale`, hypothesis makes the assumption testable and measurable.
+---
 
-Hypothesis does not require standalone artifact if the assumption is simple and can be tested with a single experiment. However, if the assumption is complex and requires multiple experiments to test, then it is recommended to create a separate hypothesis artifact.
-
-Add hypothesis ID `HYP-XXX` to the assumption backlog table to link the assumption with the hypothesis.
-
-**Note:** 
-- Think twice before you start an experiment. 
-- Make sure you have a clear hypothesis and a well-defined experiment plan. 
-- Dont over engineer the experiment. Keep it simple and focused on the key assumption you are trying to test.
+## 5. Product Requirements Document (PRD)
 
 ```mermaid
-flowchart LR
-    A[Assumptions + tool] --> B[Hyphothesis]
-    B --> C[Experiment]
-    C --> D[Evidence]
+flowchart TB
+    A[Experiment/Decision] --> B
+    B[Requirements Register Artifact] --> C
+    C[Product Backlog Artifact]
+    B --> E[Product Requirements Document Artifact]
 ```
 
-- Ref.: [Hypothesis](./docs/product/discovery/templates/HYP-XXX-hypothesis-[template].md)
-- Ref.: [Experiment](./docs/product/discovery/templates/EXP-XXX-experiment-[template].md)
 
-## 6. Make Decision
-Review the evidence gathered from the experiment and make a decision on whether to proceed with the solution, pivot, or abandon the idea. 
+### 5.1 Requirements Register
 
-Document the decision and the rationale behind it in the [Decision Record](./docs/product/discovery/templates/PDR-XXX-product-decision-record-[template].md).
+Used to capture the requirements from the experiments and decisions. The requirements are managed and tracked via register.
 
-## 7. Repeat
-Repeat the process for the next uncertainty in the backlog until the cost of discovering uncertainty is greater than the cost of building the solution.
+**Template:** `docs/product/discovery/templates/07-product-requirements-definition/RR-requirements-register-[template].ods`
 
-## 8. Synthesis
-Once you have gathered enough evidence and made decisions on the key uncertainties, synthesize the findings and document the insights in a clear and concise manner. This will help inform future decisions and provide a reference for the others.
+---
 
-Ref.: [Synthesis](./docs/product/discovery/templates/SYN-XXX-synthesis-[template].md)
+### 5.2 Product Backlog
 
-## 9. References
+Used to manage and track product backlog items. It also tracks product by releases.
 
-- YT - CZ
-Sign in
-Introduction to Product Discovery (incl. a simple process to get started) --> 
-[Link](https://www.youtube.com/watch?v=0UpQS_bU2dk)
-    - 06:54 Derisking against 3 pillers of uncertainty
-    - 07:38 Problem & Solution space (diamond)
-    - 10:05 Drill down into problem & solution space
-    - 19:00 Diverge and Converge
-    - 23:43 Assumptions mapping
-    - 26:23 Discovery backlog
-    - 27:40 Assumption --> Hypothesis -- > Experiment
-    - 30:51 Discovery cheat sheet
-    - 33:20 Time box (version in 36:52)
-    - 41:30 Loop through spaces of uncertainty
-- Discovery Cheat Sheet
-    - ![discovery-cheat-sheet-image](discovery-cheat-sheet-image.png)
-- Enterprise Product Discovery
-   - ```mermaid
-     flowchart LR
-      A[Problem] --> B[System Decomposition]
-      B --> C[Uncertainty] 
-      C --> D[Prioritize] 
-      D --> E[Technique] 
-      E --> F[Evidence] 
-      F --> G[Decision]
-     ```
-    - ```text
-      Why do we need to decompose the system?
-      Because in many real companies:
+**Template:** `docs/product/discovery/templates/07-product-requirements-definition/BL-product-backlog-[template].ods`
 
-      - people don’t even agree on what the system is
-      - the problem is not well-defined
-      - different teams see different “systems”
+---
 
-      So decomposition becomes a safety layer.
-      ```  
+### 5.3 Product Requirements Document (PRD)
+
+Used to document the product requirements in a structured format. The PRD is used to communicate the product requirements to the stakeholders.
+
+**Template:** `docs/product/discovery/templates/07-product-requirements-definition/PRD-XXX-product-requirements-definition.[template].md`
+
+---
