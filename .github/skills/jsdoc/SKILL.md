@@ -1,5 +1,5 @@
 ---
-name: documentace-jsdoc
+name: jsdoc
 description: "Generates industry-standard JSDoc documentation"
 argument-hint: Select a piece of code to generate documentation for.
 disable-model-invocation: true
